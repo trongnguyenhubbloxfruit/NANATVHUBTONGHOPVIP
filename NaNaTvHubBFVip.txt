@@ -132,7 +132,31 @@ Tabs.Main0:AddButton({
     Callback = function()
         setclipboard("tiktok.com/@trongdepzaihuz.nghesi")
     end
-})Tabs.Main3:AddButton({
+  })
+  Tabs.Main1:AddButton({
+    Title="Maru Hub",
+    Description="",
+    Callback=function()
+	  getgenv().Team =
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub"))() nè cho tui một fl
+  end
+})
+Tabs.Main0:AddButton({
+    Title = "Youtube",
+    Description = "Trongnguyen",
+    Callback = function()
+        setclipboard("https://www.youtube.com/@trongsad12345")
+    end
+})
+Tabs.Main1:AddButton({
+    Title="Maru Hub",
+    Description="",
+    Callback=function()
+	 getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub"))()
+  end
+})
+Tabs.Main3:AddButton({
     Title="Kaitun 1",
     Description="",
     Callback=function()
@@ -178,18 +202,20 @@ Tabs.Main0:AddButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TrashLua/BloxFruits/main/KaitunBeta.RiseEvo"))()
   end
 })
-Tabs.Main0:AddButton({
-    Title = "Youtube",
-    Description = "Trongnguyen",
-    Callback = function()
-        setclipboard("https://www.youtube.com/@trongsad12345")
-    end
-})
 Tabs.Main1:AddButton({
-    Title="Maru Hub",
+    Title="Min Gaming Fake Maru hub",
     Description="",
     Callback=function()
-	 getgenv().Team = "Marines"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub"))()
+	  getgenv().Team = "Pirates"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MinGamingHubNew/RealMinGaming/refs/heads/main/MinGaminvHubBloxFruits.lua"))()
   end
 })
+Tabs.Main1:AddButton({
+    Title="Min Gaming 2",
+    Description="",
+    Callback=function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinAV"))()
+  end
+})
+
+
