@@ -35,6 +35,7 @@ local Tabs = {
         Main0=Window:AddTab({ Title="Thông Tin" }),
         Main1=Window:AddTab({ Title="Script Hot Nhất"}),
         Main2=Window:AddTab({ Title="Script Kaitun" }),
+       Main3=Window:AddTab({ Title="Script Mua" }),
 }
     Tabs.Main0:AddButton({
     Title = "Discord",
@@ -133,10 +134,72 @@ Tabs.Main0:AddButton({
         setclipboard("tiktok.com/@trongdepzaihuz.nghesi")
     end
   })
-Tabs.Main3:AddButton({
+Tabs.Main2:AddButton({
     Title="Rise Kaitun",
     Description="",
     Callback=function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TrashLua/BloxFruits/main/KaitunBeta.RiseEvo"))()
+  end
+})
+Tabs.Main3:AddButton({
+    Title="Banana Hub Premium (24h reset key 1 lần)",
+    Description="",
+    Callback=function()
+	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
+  end
+})
+Tabs.Main3:AddButton({
+    Title="Banana Hub Premium (24h reset key 1 lần)",
+    Description="",
+    Callback=function()
+	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
+  end
+})
+Tabs.Main3:AddButton({
+    Title="Banana Hub Premium (24h reset key 1 lần)",
+    Description="",
+    Callback=function()
+	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
+  end
+})
+Tabs.Main3:AddButton({
+    Title="Maru Hub (24h Reset key 1 lần)",
+    Description="",
+    Callback=function()
+	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
+  end
+})Tabs.Main3:AddButton({
+    Title="Maru hub(24h reset key 1 lần)",
+    Description="",
+    Callback=function()
+	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
+  end
+})
+Tabs.Main3:AddButton({
+    Title="Maru Hub (24h reset key 1 lần)",
+    Description="",
+    Callback=function()
+	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
+  end
+})
+Tabs.Main3:AddButton({
+    Title="Maru Hub(24h reset key 1 lần)",
+    Description="",
+    Callback=function()
+	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
+  end
+})
+Tabs.Main3:AddButton({
+    Title="W-azure hub Premium(24h reset key 1 lần)",
+    Description="",
+    Callback=function()
+	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
+  end
+})
+Tabs.Main3:AddButton({
+    Title="W-azure Premium (24h reset key 1 lần)",
+    Description="",
+    Callback=function()
+	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
   end
 })
