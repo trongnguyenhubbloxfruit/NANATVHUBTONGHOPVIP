@@ -133,3 +133,10 @@ Tabs.Main0:AddButton({
         setclipboard("tiktok.com/@trongdepzaihuz.nghesi")
     end
   })
+Tabs.Main3:AddButton({
+    Title="Rise Kaitun",
+    Description="",
+    Callback=function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TrashLua/BloxFruits/main/KaitunBeta.RiseEvo"))()
+  end
+})
