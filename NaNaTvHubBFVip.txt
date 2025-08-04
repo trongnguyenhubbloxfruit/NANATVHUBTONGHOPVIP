@@ -1,0 +1,195 @@
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=124216899773687"
+
+UICorner.CornerRadius = UDim.new(1, 10) 
+UICorner.Parent = ImageButton
+
+ImageButton.MouseButton1Down:Connect(function()
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+end)
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+repeat wait() until game:IsLoaded()
+local Window = Fluent:CreateWindow({
+    Title = "NaNa Tv Hub",
+    SubTitle = "By TrongNguyen X NaNa Tv",
+    TabWidth = 157,
+    Size = UDim2.fromOffset(450, 300),
+    Acrylic = true,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.End
+})
+local Tabs = {
+        Main0=Window:AddTab({ Title="Thông Tin" }),
+        Main1=Window:AddTab({ Title="Script Hot Nhất"}),
+        Main2=Window:AddTab({ Title="Script Kaitun" }),
+}
+    Tabs.Main0:AddButton({
+    Title = "Discord",
+    Description = "Trongnguyen",
+    Callback = function()
+        setclipboard("https://discord.gg/BqGs2dXKyJ")
+    end
+})
+
+    Tabs.Main0:AddButton({
+    Title = "Tik Tok",
+    Description = "Trongnguyen",
+    Callback = function()
+        setclipboard("tiktok.com/@trongdepzaihuz.nghesi")
+    end
+})
+
+    Tabs.Main0:AddButton({
+    Title = "Tik Tok",
+    Description = "NaNa Tv",
+    Callback = function()
+        setclipboard("https://www.tiktok.com/@nana.tv.roblox")
+    end
+})
+    
+    Tabs.Main1:AddButton({
+    Title="AnDepZai Hub",
+    Description="",
+    Callback=function()
+    repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trongnguyen345roblox/TRONGNGUYEN/refs/heads/main/andepzainewupdate.txt"))()
+	  
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="NaNa Tv Hub",
+    Description="",
+    Callback=function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/trongnguyenhubbloxfruit/NANATVHUB/refs/heads/main/NaNaTvHub.txt"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="Xeter Hub",
+    Description="",
+    Callback=function()
+	  getgenv().Version = "V1"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Loader/main/Xeter.lua"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="Xeter hub v2",
+    Description="",
+    Callback=function()
+	  getgenv().Version = "V2"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Loader/main/Xeter.lua"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="Xeter hub v3",
+    Description="",
+    Callback=function()
+	  getgenv().Version = "V3"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Loader/main/Xeter.lua"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="Redz Hub",
+    Description="",
+    Callback=function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))(Settings)
+  end
+})
+Tabs.Main1:AddButton({
+    Title="W-azure",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/85e904ae1ff30824c1aa007fc7324f8f.lua"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="Banana Hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/kimprobloxdz/Banana-Free/refs/heads/main/Protected_5609200582002947.lua.txt"))()
+  end
+})
+Tabs.Main0:AddButton({
+    Title = "Phát Triển Trongnguyen",
+    Description = "",
+    Callback = function()
+        setclipboard("tiktok.com/@trongdepzaihuz.nghesi")
+    end
+})Tabs.Main3:AddButton({
+    Title="Kaitun 1",
+    Description="",
+    Callback=function()
+	  Config = {
+["Melee"] = {
+["Superhuman"] = true,
+["Death Step"] = true,
+["Sharkman Karate"] = true,
+["Electric Claw"] = true,
+["Dragon Talon"] = true,
+["Godhuman"] = true
+},
+["Sword"] = {
+["Saber"] = true,
+["Rengoku"] = true,
+["Canvander"] = true,
+["Buddy Sword"] = true,
+["Yama"] = true,
+["Tushita"] = true,
+["True Triple Katana"] = true,
+["Cursed Dual Katana"] = true
+},
+["Gun"] = {
+["Kabucha"] = true,
+["Acidum Rifle"] = true,
+["Serpent Bow"] = true
+},
+["Mastery"] = {
+["Sword"] = true
+},
+["Setting"] = {
+["Enabled"] = true,
+["Bring Mob [Less Lag]"] = true,
+["Hop Server"] = true,
+["Reduce Lag"] = true,
+["Notifycation Remove"] = true,
+["Hop When Player Nearby"] = {
+["Enabled"] = true,
+["Radius"] = 350
+}
+}
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TrashLua/BloxFruits/main/KaitunBeta.RiseEvo"))()
+  end
+})
+Tabs.Main0:AddButton({
+    Title = "Youtube",
+    Description = "Trongnguyen",
+    Callback = function()
+        setclipboard("https://www.youtube.com/@trongsad12345")
+    end
+})
+Tabs.Main1:AddButton({
+    Title="Maru Hub",
+    Description="",
+    Callback=function()
+	 getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub"))()
+  end
+})
