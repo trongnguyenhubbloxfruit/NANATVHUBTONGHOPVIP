@@ -24,7 +24,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 repeat wait() until game:IsLoaded()
 local Window = Fluent:CreateWindow({
     Title = "NaNa Tv Hub",
-    SubTitle = "By TrongNguyen X NaNa Tv",
+    SubTitle = "By TrongNguyen X NaNa Tv I Update T3 Ng8 Th8",
     TabWidth = 157,
     Size = UDim2.fromOffset(450, 300),
     Acrylic = true,
@@ -36,6 +36,7 @@ local Tabs = {
         Main1=Window:AddTab({ Title="Script Hot Nhất"}),
         Main2=Window:AddTab({ Title="Script Kaitun" }),
        Main3=Window:AddTab({ Title="Script Mua" }),
+       Main4=Window:AddTab({ Title="Linh Tinh"}),
 }
     Tabs.Main0:AddButton({
     Title = "Discord",
@@ -128,8 +129,8 @@ Tabs.Main1:AddButton({
   end
 })
 Tabs.Main0:AddButton({
-    Title = "Phát Triển Trongnguyen",
-    Description = "",
+    Title = "Do Trongnguyen Phát Triển",
+    Description = "Kĩ Năng Không Cần Phải Bàn cải",
     Callback = function()
         setclipboard("tiktok.com/@trongdepzaihuz.nghesi")
     end
@@ -203,3 +204,125 @@ Tabs.Main3:AddButton({
 	  game.Players.LocalPlayer:Kick("Con đỉ mẹ mày tham vừa thôi")
   end
 })
+Tabs.Main1:AddButton({
+    Title="Trongnguyen bay up draco",
+    Description="Dành Cho mấy thg chơi map oby",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/trongnguyenhubbloxfruit/TrongNguyenFlyGui/refs/heads/main/FlyGuiV3.txt"))()
+  end
+})
+Tabs.Main4:AddButton({
+    Title="Reset Trái + Điểm F(không nên dùng)",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnDepZaiHubBeta/refs/heads/main/Kaitun.txt"))()
+  end
+})
+Tabs.Main4:AddButton({
+    Title="Đổi Sever",
+    Description="",
+    Callback=function()
+	  -- Script Server Hop Roblox Blox Fruits
+local HttpService = game:GetService("HttpService")
+local TeleportService = game:GetService("TeleportService")
+local Players = game:GetService("Players")
+
+local PlaceID = game.PlaceId
+local AllIDs = {}
+local found = false
+
+-- Lưu lại server đã vào để không vào lại
+local function SaveID(id)
+    local success, result = pcall(function()
+        writefile("NotSameServers.json", HttpService:JSONEncode(AllIDs))
+    end)
+end
+
+-- Tải danh sách ID đã lưu
+local function LoadIDs()
+    local success, result = pcall(function()
+        local data = readfile("NotSameServers.json")
+        AllIDs = HttpService:JSONDecode(data)
+    end)
+end
+
+local function ServerHop()
+    LoadIDs()
+
+    local cursor = ""
+    local function GetServers()
+        local url = "https://games.roblox.com/v1/games/" .. PlaceID .. "/servers/Public?sortOrder=Asc&limit=100&cursor=" .. cursor
+        local response = HttpService:JSONDecode(game:HttpGet(url))
+        for _, v in pairs(response.data) do
+            if v.playing < v.maxPlayers and v.id ~= game.JobId then
+                local alreadyJoined = false
+                for _, id in pairs(AllIDs) do
+                    if id == v.id then
+                        alreadyJoined = true
+                        break
+                    end
+                end
+                if not alreadyJoined then
+                    table.insert(AllIDs, v.id)
+                    SaveID(v.id)
+                    TeleportService:TeleportToPlaceInstance(PlaceID, v.id, Players.LocalPlayer)
+                    wait(4)
+                end
+            end
+        end
+        if response.nextPageCursor then
+            cursor = response.nextPageCursor
+            GetServers()
+        end
+    end
+
+    GetServers()
+end
+
+-- Chạy script
+ServerHop()
+  end
+})
+Tabs.Main4:AddButton({
+    Title="Ramdom Trái",
+    Description="Cho mấy thg lười",
+    Callback=function()
+	  -- Auto Random Fruit (Blox Fruits)
+-- Bảo đảm bạn đang ở gần NPC Cousin trước khi dùng script
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+
+-- Delay giữa mỗi lần random (để tránh bị lỗi spam)
+local delayTime = 5  -- giây
+
+-- Hàm random fruit
+local function RandomFruit()
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+
+    -- Gửi sự kiện đến server để mua trái
+    ReplicatedStorage.Remotes.CommF_:InvokeServer(unpack(args))
+end
+
+-- Lặp vô hạn để auto random (nếu đủ tiền và điều kiện)
+while true do
+    pcall(function()
+        RandomFruit()
+    end)
+    wait(delayTime)
+end
+  end
+})
+
+
+
+
+
+
+
+
+
+
